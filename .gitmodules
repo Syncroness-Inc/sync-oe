@@ -1,0 +1,42 @@
+[submodule "sources/meta-angstrom"]
+	path = sources/meta-angstrom
+	url = git@github.com:Angstrom-distribution/meta-angstrom.git
+[submodule "sources/meta-browser"]
+	path = sources/meta-browser
+	url = git@github.com:OSSystems/meta-browser.git
+[submodule "sources/meta-freescale"]
+	path = sources/meta-freescale
+	url = git@github.com:Freescale/meta-freescale.git
+[submodule "sources/meta-freescale-3rdparty"]
+	path = sources/meta-freescale-3rdparty
+	url = git@github.com:Freescale/meta-freescale-3rdparty.git
+[submodule "sources/meta-freescale-distro"]
+	path = sources/meta-freescale-distro
+	url = git@github.com:Freescale/meta-freescale-distro.git
+[submodule "sources/meta-lxde"]
+	path = sources/meta-lxde
+	url = git://git.toradex.com/meta-lxde.git
+[submodule "sources/meta-openembedded"]
+	path = sources/meta-openembedded
+	url = git@github.com:openembedded/meta-openembedded.git
+[submodule "sources/meta-qt4"]
+	path = sources/meta-qt4
+	url = git://git.yoctoproject.org/meta-qt4
+[submodule "sources/meta-qt5"]
+	path = sources/meta-qt5
+	url = git://code.qt.io/yocto/meta-qt5.git
+[submodule "sources/meta-qt5-extra"]
+	path = sources/meta-qt5-extra
+	url = git://github.com/schnitzeltony/meta-qt5-extra.git
+[submodule "sources/meta-toradex-bsp-common"]
+	path = sources/meta-toradex-bsp-common
+	url = git://git.toradex.com/meta-toradex-bsp-common.git
+[submodule "sources/meta-toradex-demos"]
+	path = sources/meta-toradex-demos
+	url = git://git.toradex.com/meta-toradex-demos.git
+[submodule "sources/meta-toradex-nxp"]
+	path = sources/meta-toradex-nxp
+	url = git://git.toradex.com/meta-toradex-nxp.git
+[submodule "sources/openembedded-core"]
+	path = sources/openembedded-core
+	url = git@github.com:openembedded/openembedded-core.git
