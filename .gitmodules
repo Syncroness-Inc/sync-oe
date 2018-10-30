@@ -40,3 +40,6 @@
 [submodule "sources/openembedded-core"]
 	path = sources/openembedded-core
 	url = git@github.com:openembedded/openembedded-core.git
+[submodule "sources/bitbake"]
+	path = sources/bitbake
+	url = git://git.openembedded.org/bitbake
