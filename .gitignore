@@ -3,3 +3,4 @@ deploy
 !*build/conf
 !*build/conf/bblayers.conf
 !*build/conf/local.conf
+*build/conf/sanity_info
