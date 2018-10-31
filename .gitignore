@@ -1,2 +1,5 @@
 deploy
-*build/
+*build/*
+!*build/conf
+!*build/conf/bblayers.conf
+!*build/conf/local.conf

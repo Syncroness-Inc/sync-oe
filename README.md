@@ -1,3 +1,3 @@
 ### Setup Build
 
-`BITBAKEDIR=/home/adam/sync-oe/sources/bitbake source sources/openembedded-core/oe-init-build-env toradex-build`
+`BITBAKEDIR=./sync-oe/sources/bitbake source sources/openembedded-core/oe-init-build-env $PROJECT_NAME-build`
