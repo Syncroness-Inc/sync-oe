@@ -43,3 +43,7 @@
 [submodule "sources/bitbake"]
 	path = sources/bitbake
 	url = git://git.openembedded.org/bitbake
+[submodule "sources/poky"]
+	path = sources/poky
+	url = git://git.yoctoproject.org/poky
+	branch = rocko
