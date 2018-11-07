@@ -1,0 +1,128 @@
+--- Starting bitbake server pid 17700 at 2018-11-07 00:26:42.380422 ---
+Started bitbake server pid 17700
+DEBUG: Found bblayers.conf (/home/adam/sync-oe/cytovale-build/conf/bblayers.conf)
+DEBUG: Adding layer /home/adam/sync-oe/cytovale-build/../sources/meta-angstrom
+DEBUG: Adding layer /home/adam/sync-oe/cytovale-build/../sources/meta-toradex-nxp
+DEBUG: Adding layer /home/adam/sync-oe/cytovale-build/../sources/meta-freescale
+DEBUG: Adding layer /home/adam/sync-oe/cytovale-build/../sources/meta-freescale-3rdparty
+DEBUG: Adding layer /home/adam/sync-oe/cytovale-build/../sources/meta-toradex-bsp-common
+DEBUG: Adding layer /home/adam/sync-oe/cytovale-build/../sources/meta-openembedded/meta-oe
+DEBUG: Adding layer /home/adam/sync-oe/cytovale-build/../sources/meta-openembedded/meta-filesystems
+DEBUG: Adding layer /home/adam/sync-oe/cytovale-build/../sources/meta-openembedded/meta-gnome
+DEBUG: Adding layer /home/adam/sync-oe/cytovale-build/../sources/meta-openembedded/meta-xfce
+DEBUG: Adding layer /home/adam/sync-oe/cytovale-build/../sources/meta-openembedded/meta-initramfs
+DEBUG: Adding layer /home/adam/sync-oe/cytovale-build/../sources/meta-openembedded/meta-networking
+DEBUG: Adding layer /home/adam/sync-oe/cytovale-build/../sources/meta-openembedded/meta-multimedia
+DEBUG: Adding layer /home/adam/sync-oe/cytovale-build/../sources/meta-openembedded/meta-python
+DEBUG: Adding layer /home/adam/sync-oe/cytovale-build/../sources/meta-lxde
+DEBUG: Adding layer /home/adam/sync-oe/cytovale-build/../sources/meta-browser
+DEBUG: Adding layer /home/adam/sync-oe/cytovale-build/../sources/meta-qt4
+DEBUG: Adding layer /home/adam/sync-oe/cytovale-build/../sources/meta-qt5
+DEBUG: Adding layer /home/adam/sync-oe/cytovale-build/../sources/meta-qt5-extra
+DEBUG: Adding layer /home/adam/sync-oe/cytovale-build/../sources/meta-freescale-distro
+DEBUG: Adding layer /home/adam/sync-oe/cytovale-build/../sources/meta-toradex-demos
+DEBUG: Adding layer /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta
+DEBUG: Adding layer /home/adam/sync-oe/cytovale-build/../sources/meta-cytovale
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/bitbake.conf:741: including conf/abi_version.conf
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/bitbake.conf:742: including conf/site.conf
+Entering server connection loop
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/bitbake.conf:743: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/bitbake.conf:744: including conf/local.conf
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/conf/local.conf:280: including conf/machine/include/apalis-imx6.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/bitbake.conf:745: including conf/multiconfig/default.conf
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/bitbake.conf:746: including conf/machine/apalis-imx6.conf
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/meta-freescale-3rdparty/conf/machine/apalis-imx6.conf:9: including conf/machine/include/imx-base.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/meta-freescale/conf/machine/include/imx-base.inc:3: including conf/machine/include/fsl-default-settings.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/meta-freescale/conf/machine/include/imx-base.inc:4: including conf/machine/include/fsl-default-versions.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/meta-freescale/conf/machine/include/imx-base.inc:6: including conf/machine/include/utilities.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/meta-freescale-3rdparty/conf/machine/apalis-imx6.conf:10: including conf/machine/include/tune-cortexa9.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/machine/include/tune-cortexa9.inc:3: including conf/machine/include/arm/arch-armv7a.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/machine/include/arm/arch-armv7a.inc:8: including conf/machine/include/arm/arch-armv6.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/machine/include/arm/arch-armv6.inc:8: including conf/machine/include/arm/arch-armv5-dsp.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/machine/include/arm/arch-armv5-dsp.inc:4: including conf/machine/include/arm/arch-armv5.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/machine/include/arm/arch-armv5.inc:8: including conf/machine/include/arm/arch-armv4.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/machine/include/arm/arch-armv4.inc:15: including conf/machine/include/arm/arch-arm.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/machine/include/arm/arch-armv4.inc:16: including conf/machine/include/arm/feature-arm-thumb.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/machine/include/arm/arch-armv5.inc:9: including conf/machine/include/arm/feature-arm-vfp.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/machine/include/arm/arch-armv7a.inc:9: including conf/machine/include/arm/feature-arm-neon.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/bitbake.conf:747: including conf/machine-sdk/x86_64.conf
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/bitbake.conf:748: including conf/distro/angstrom.conf
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/meta-angstrom/conf/distro/angstrom.conf:34: including conf/distro/include/sane-srcdates.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/meta-angstrom/conf/distro/angstrom.conf:35: including conf/distro/include/sane-srcrevs.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/meta-angstrom/conf/distro/angstrom.conf:36: including conf/distro/include/angstrom-preferred-versions.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/meta-angstrom/conf/distro/angstrom.conf:37: including conf/distro/include/angstrom-mesa-tweaks.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/meta-angstrom/conf/distro/angstrom.conf:97: including conf/distro/include/angstrom.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/meta-angstrom/conf/distro/include/angstrom.inc:29: including conf/distro/include/angstrom-glibc.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/meta-angstrom/conf/distro/include/angstrom.inc:32: including conf/distro/include/angstrom-java.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/meta-angstrom/conf/distro/include/angstrom.inc:94: including conf/distro/include/angstrom-package-ipk.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/meta-angstrom/conf/distro/include/angstrom.inc:146: including conf/distro/include/efl-from-svn.inc
+DEBUG: CONF file 'conf/distro/include/efl-from-svn.inc' not found
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/meta-angstrom/conf/distro/include/angstrom.inc:149: including conf/distro/include/angstrom-core-tweaks.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/meta-angstrom/conf/distro/include/angstrom-core-tweaks.inc:111: including conf/distro/include/preferred-opie-git-versions.inc
+DEBUG: CONF file 'conf/distro/include/preferred-opie-git-versions.inc' not found
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/meta-angstrom/conf/distro/angstrom.conf:103: including conf/distro/include/toolchain-internal.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/meta-angstrom/conf/distro/angstrom.conf:105: including conf/distro/include/arm-defaults.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/bitbake.conf:749: including conf/distro/defaultsetup.conf
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/distro/include/tcmode-default.inc:71: including conf/distro/include/as-needed.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/bitbake.conf:750: including conf/documentation.conf
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/bitbake.conf:751: including conf/licenses.conf
+DEBUG: CONF /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/conf/bitbake.conf:752: including conf/sanity.conf
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/patch.bbclass (from /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/terminal.bbclass (from /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/staging.bbclass (from /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/mirrors.bbclass (from /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/utils.bbclass (from /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/utility-tasks.bbclass (from /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/metadata_scm.bbclass (from /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/logging.bbclass (from /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/rm_work.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/meta-toradex-demos/classes/toradex-mirrors.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/meta-freescale/classes/machine-overrides-extender.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/meta-freescale/classes/fsl-dynamic-packagearch.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/package.bbclass (from /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/debian.bbclass:14)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/packagedata.bbclass (from /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/chrpath.bbclass (from /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/insane.bbclass (from /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/package.bbclass:45)
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>]
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+Connecting Client
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/meta-angstrom/classes/angstrom-mirrors.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/buildhistory.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/package_ipk.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/linuxloader.bbclass (from /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/image-prelink.bbclass:9)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/adam/sync-oe/cytovale-build/../sources/openembedded-core/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/adam/sync-oe/cytovale-build/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/adam/sync-oe/cytovale-build/cache/bb_codeparser.dat'
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'abort': True, 'force': False, 'invalidate_stamp': None, 'verbose': False, 'debug': 0, 'dry_run': False, 'dump_signatures': [], 'debug_domains': [], 'extra_assume_provided': [], 'profile': False, 'prefile': [], 'postfile': [], 'server_timeout': None}, {'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'USER': 'adam', 'PWD': '/home/adam/sync-oe/sources/meta-cytovale/recipes-python/cym-application', 'HOME': '/home/adam', 'SSH_AGENT_PID': '1665', 'BBPATH': '/home/adam/sync-oe/cytovale-build', 'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'TERM': 'xterm-256color', 'SHELL': '/bin/bash', 'LOGNAME': 'adam', 'PATH': '/home/adam/sync-oe/sources/openembedded-core/scripts:/home/adam/sync-oe/sources/bitbake/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ALL': 'en_US.UTF-8', 'CLUTTER_IM_MODULE': 'xim', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'XDG_MENU_PREFIX': 'gnome-', 'LANG': 'en_US.UTF-8', 'DISPLAY': ':0', 'OLDPWD': '/home/adam/sync-oe/sources/meta-cytovale/recipes-core/images', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'COLORTERM': 'truecolor', 'DESKTOP_AUTOSTART_ID': '107a9b10d33bd8141b15413980949043800000015690007', 'USERNAME': 'adam', 'XDG_VTNR': '2', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'XDG_SESSION_ID': '2', 'DESKTOP_SESSION': 'ubuntu', 'QT4_IM_MODULE': 'xim', 'TEXTDOMAINDIR': '/usr/share/locale/', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/30f2b9be_a3be_4a12_8aac_3c471bace78a', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'TEXTDOMAIN': 'im-config', 'QT_ACCESSIBILITY': '1', 'XDG_SESSION_TYPE': 'x11', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'XDG_SESSION_DESKTOP': 'ubuntu', 'BUILDDIR': '/home/adam/sync-oe/cytovale-build', 'GTK_MODULES': 'gail:atk-bridge', 'WINDOWPATH': '2', 'VTE_VERSION': '5202', 'QT_IM_MODULE': 'xim', 'XMODIFIERS': '@im=ibus', 'IM_CONFIG_PHASE': '2', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GNOME_TERMINAL_SERVICE': ':1.72', 'XDG_SEAT': 'seat0', 'SHLVL': '1', 'GDMSESSION': 'ubuntu', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'SESSION_MANAGER': 'local/ubuntu:@/tmp/.ICE-unix/1569,unix/ubuntu:/tmp/.ICE-unix/1569', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GTK_IM_MODULE': 'ibus', '_': '/home/adam/sync-oe/sources/bitbake/bin/bitbake'}, ['/home/adam/sync-oe/sources/bitbake/bin/bitbake', 'angstrom-lxde-image']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['angstrom-lxde-image'], 'build']
+Connecting Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
