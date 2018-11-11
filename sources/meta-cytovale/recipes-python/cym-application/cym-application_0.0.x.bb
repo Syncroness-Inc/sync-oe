@@ -6,7 +6,8 @@ SRCREV = "8357a4bf27054ac27f3c0ebd2ad7590ec0add208"
 
 S = "${WORKDIR}/git/cytovale_app"
 
-#TODO: Create a setup file
+IMAGE_INSTALL = "python3"
+
 inherit setuptools
 
 do_install_append () {
