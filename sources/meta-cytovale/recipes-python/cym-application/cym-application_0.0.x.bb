@@ -2,13 +2,11 @@ DESCRIPTION = "Cytovale Cytometry Module Application Software"
 LICENSE = "CLOSED"
 
 SRC_URI = "git://git@github.com/syncroness-inc/cytovale-sw.git;branch=setup;protocol=ssh"
-SRCREV = "8357a4bf27054ac27f3c0ebd2ad7590ec0add208"
+SRCREV = "d0dd4bb3a87448fcde431b4e97b9e41751b9f388"
 
 S = "${WORKDIR}/git/cytovale_app"
 
-IMAGE_INSTALL = "python3"
-
-inherit setuptools
+inherit setuptools3
 
 do_install_append () {
 	install -d ${D}${bindir}
