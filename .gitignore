@@ -5,3 +5,5 @@ deploy
 !*build/conf/local.conf
 *build/conf/sanity_info
 */*.log
+*.log
+*.img
