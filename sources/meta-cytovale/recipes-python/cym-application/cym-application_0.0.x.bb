@@ -1,8 +1,8 @@
 DESCRIPTION = "Cytovale Cytometry Module Application Software"
 LICENSE = "CLOSED"
 
-SRC_URI = "git://git@github.com/syncroness-inc/cytovale-sw.git;branch=master;protocol=ssh"
-SRCREV = "fd327689ce1ca7ba6c58169066999e903d6db5c2"
+SRC_URI = "git://git@github.com/syncroness-inc/cytovale-sw.git;branch=setup;protocol=ssh"
+SRCREV = "8357a4bf27054ac27f3c0ebd2ad7590ec0add208"
 
 S = "${WORKDIR}/git/cytovale_app"
 
