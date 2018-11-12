@@ -11,4 +11,7 @@ IMAGE_INSTALL += " cym-application \
                    python3-console-menu \
                    python3-opencv \
                    python3-cobs \
+                   python3-crc8 \
+                   python3-crc32c \
+                   git \
 "
