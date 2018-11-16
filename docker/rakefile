@@ -1,0 +1,16 @@
+RAKEFILE_DIR = File.expand_path(File.dirname(__FILE__))
+DOCKER_IMAGE = "sync-oe"
+USERNAME = "oe-user"
+WORKING_CONTAINER = "sync-oe"
+
+task :image do
+  sh "docker build -t #{DOCKER_IMAGE} #{RAKEFILE_DIR}"
+end
+
+task :root_shell do
+  sh "docker run -it --privileged #{DOCKER_IMAGE} /bin/bash"
+end
+
+task :shell do
+  sh "docker run --user #{USERNAME} -it --privileged #{DOCKER_IMAGE} /bin/bash"
+end
