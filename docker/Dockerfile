@@ -5,6 +5,7 @@ WORKDIR /app
 # ** Variables **
 
 ENV USERNAME=oe-user
+ENV BITBAKEDIR=/app/sync-oe/sources/bitbake
 
 # ** Provisioning the container **
 
@@ -35,6 +36,17 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 # Update the package listing and install the packages in packages.txt
 RUN dpkg --add-architecture i386
 RUN apt-get update
+RUN apt-get install -y locales
 RUN apt-get install -y $(grep -vE "^\s*#" /app/packages.txt  | tr "\n" " ")
+
+# Language options
+
+# Set up utf8
+RUN locale-gen en_US.UTF-8
+RUN update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8# Set up utf8
+
+ENV LC_ALL=en_US.UTF-8
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US.UTF-8
 
 ENTRYPOINT []

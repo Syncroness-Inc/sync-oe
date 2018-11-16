@@ -1,3 +1,4 @@
+python3
 vim
 g++-5-multilib
 curl 
@@ -17,3 +18,7 @@ libusb-1.0-0-dev:i386
 uuid-dev:i386 
 texinfo 
 chrpath
+cpio 
+diffstat 
+git 
+wget
