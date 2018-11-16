@@ -1,9 +1,7 @@
 IMAGE_NAME=sync-oe
 USERNAME=oe-user
-PROJECT_ROOT="`dirname \"$0\"`"/..
+PROJECT_ROOT=$(realpath "`dirname \"$0\"`/..")
 
 command="'$*'"
 
-set -v
-
-docker run --user $USERNAME -it --privileged $IMAGE_NAME /bin/bash -c "'$command'"
+docker run -v $PROJECT_ROOT:/app/sync-oe --user $USERNAME -it --privileged $IMAGE_NAME /bin/bash -c "cd /app/sync-oe; '$command'"
