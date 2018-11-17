@@ -1,0 +1,11 @@
+if [ "$#" -ne 2 ]; then
+    echo "Usage: $0 [PROJECT_NAME-build] [Command-to-execute]"
+    exit 1
+fi
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )/.."
+
+build=$1
+command=$2
+
+$DIR/docker/sync-oe-execute "source sources/openembedded-core/oe-init-build-env $build; $command"
