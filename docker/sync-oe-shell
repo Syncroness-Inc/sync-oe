@@ -2,4 +2,4 @@ IMAGE_NAME=sync-oe
 USERNAME=oe-user
 PROJECT_ROOT=$(realpath "`dirname \"$0\"`/..")
 
-docker run -v $PROJECT_ROOT:/app/sync-oe --user $USERNAME -it --privileged $IMAGE_NAME /bin/bash 
+docker run -v $PROJECT_ROOT/user:/home/$USERNAME -v $PROJECT_ROOT:/app/sync-oe --user $USERNAME -it --privileged $IMAGE_NAME /bin/bash 
