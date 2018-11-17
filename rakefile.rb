@@ -3,7 +3,7 @@ RUN_SCRIPT = File.join(PROJECT_ROOT, "scripts", "sync-oe-run")
 
 # Defines for the cytovale image
 CYTOVALE_PROJECT = "cytovale-build"
-CYTOVALE_IMAGE = "angstrom-image-lxde"
+CYTOVALE_IMAGE = "angstrom-lxde-image"
 
 def bitbake(project, image)
   cmd = "#{RUN_SCRIPT} #{project} \"bitbake #{image}\""
