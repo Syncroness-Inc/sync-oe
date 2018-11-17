@@ -6,9 +6,11 @@ CYTOVALE_PROJECT = "cytovale-build"
 CYTOVALE_IMAGE = "angstrom-image-lxde"
 
 def bitbake(project, image)
-  sh "#{RUN_SCRIPT} #{project} bitbake #{image}"
+  cmd = "#{RUN_SCRIPT} #{project} \"bitbake #{image}\""
+  sh "#{cmd}"
 end
 
+desc "Build the #{CYTOVALE_IMAGE} for the #{CYTOVALE_PROJECT} project"
 task :cytovale_image do
   bitbake(CYTOVALE_PROJECT, CYTOVALE_IMAGE)
 end
