@@ -4,4 +4,4 @@ PROJECT_ROOT=$(realpath "`dirname \"$0\"`/..")
 
 command="'$*'"
 
-docker run -v $PROJECT_ROOT:/app/sync-oe --user $USERNAME -it --privileged $IMAGE_NAME /bin/bash -c "cd /app/sync-oe; '$command'"
+docker run -v $PROJECT_ROOT/keys:/app/$USERNAME/.ssh -v $PROJECT_ROOT:/app/sync-oe --user $USERNAME -it --privileged $IMAGE_NAME /bin/bash -c "cd /app/sync-oe; '$command'"
