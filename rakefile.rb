@@ -42,11 +42,29 @@ task :cytovale_image do
 end
 
 desc "Build a release package for the Cytovale project"
-task :cytovale_release => [] do
+task :cytovale_release => [:cytovale_image] do
   build_time = Time.now.strftime("%Y-%m-%d-%H-%M-%S")
   release_directory = File.join(RELEASE_FOLDER, CYTOVALE_PROJECT, CYTOVALE_IMAGE, build_time)
-  write_host_info(release_directory)
-  write_docker_image_info(release_directory)
-  # TODO: This will probably be cytovale unique
-  # write_release_image_info(release_directory, CYTOVALE_PROJECT, CYTOVALE_IMAGE)
+  deploy_dir = File.join(PROJECT_ROOT, "deploy", "images", "apalis-imx6")
+
+  build_info_directory = File.join(release_directory, "build_info")
+  write_host_info(build_info_directory)
+  write_docker_image_info(build_info_directory)
+
+  # Get our Linux binaries
+  linux_directory =  File.join(release_directory, "linux")
+  FileUtils.mkdir_p(linux_directory)
+  linux_image = File.join(deploy_dir, "zImage")
+  dtb_file = File.join(deploy_dir, "zImage-imx6q-apalis-eval.dtb")
+  FileUtils.cp(linux_image, linux_directory)
+  FileUtils.cp(dtb_file, linux_directory)
+  # TODO: Get linux version (or just manually grab it) 
+
+  # Get our Rootfs and the package manifest
+  rootfs_directory = File.join(release_directory, "rootfs")
+  FileUtils.mkdir_p(rootfs_directory)
+  rootfs_tarball = File.join(deploy_dir, "LXDE-Image-apalis-imx6.tar.xz")
+  rootfs_manifest = File.join(deploy_dir, "LXDE-Image-apalis-imx6.manifest")
+  FileUtils.cp(rootfs_tarball, rootfs_directory)
+  FileUtils.cp(rootfs_manifest, rootfs_directory)
 end
