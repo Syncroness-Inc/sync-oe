@@ -1,3 +1,26 @@
+## Building with Docker Image
+
+### Download this repo
+
+```
+git clone --recursive -b rocko git@github.com:Syncroness-Inc/sync-oe.git
+```
+
+### Install Packages
+
+```
+sudo apt-get install rake
+sudo snap install docker
+```
+
+### Build the release package
+
+```
+rake cytovale_release
+```
+
+## Building on host OS (Not Recommended)
+
 ### Download this repo
 
 ```
