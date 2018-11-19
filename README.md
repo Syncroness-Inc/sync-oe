@@ -13,6 +13,15 @@ sudo apt-get install rake
 sudo snap install docker
 ```
 
+### Configure Docker
+
+```
+sudo groupadd docker 
+sudo usermod -aG docker $USER
+```
+
+Log out and back in after this step
+
 ### Build the release package
 
 ```
