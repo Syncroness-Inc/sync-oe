@@ -38,6 +38,8 @@ Get your public key by running `cat id_rsa.pub`
 
 Add your public key to your [github account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 
+Test your connection by executing `ssh -v git@github.com`
+
 ### Build the release package
 
 ```
