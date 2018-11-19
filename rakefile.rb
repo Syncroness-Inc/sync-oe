@@ -36,8 +36,15 @@ def write_docker_image_info(release_directory)
   `docker save sync-oe -o #{image_file}`
 end
 
+desc "Build the sync-oe docker image"
+task :docker_image do
+  Dir.chdir("docker") do
+    sh "rake image"
+  end
+end
+
 desc "Build the #{CYTOVALE_IMAGE} for the #{CYTOVALE_PROJECT} project"
-task :cytovale_image do
+task :cytovale_image => [:docker_image] do
   bitbake(CYTOVALE_PROJECT, CYTOVALE_IMAGE)
 end
 
