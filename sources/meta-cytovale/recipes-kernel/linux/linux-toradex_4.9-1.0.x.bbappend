@@ -1,5 +1,3 @@
-include conf/tdx_version.conf
-
 FILESEXTRAPATHS_prepend := "${THISDIR}/linux-toradex_4.9-1.0.x.bbappend:"
 
 LOCALVERSION = "-${TDX_VER_ITEM}"

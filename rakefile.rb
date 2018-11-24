@@ -6,6 +6,7 @@ DOCKER_EXECUTE_SCRIPT = File.join(PROJECT_ROOT, "docker", "sync-oe-execute")
 # Defines for the cytovale image
 CYTOVALE_PROJECT = "cytovale-build"
 CYTOVALE_IMAGE = "cytovale-cym-image"
+CYTOVALE_DEV_IMAGE = "cytovale-cym-dev-image"
 
 def bitbake(project, image)
   cmd = "#{RUN_SCRIPT} #{project} \"bitbake #{image}\""
@@ -41,6 +42,11 @@ task :docker_image do
   Dir.chdir("docker") do
     sh "rake image"
   end
+end
+
+desc "Build the #{CYTOVALE_DEV_IMAGE} for the #{CYTOVALE_PROJECT} project"
+task :cytovale_dev_image => [:docker_image] do
+	bitbake(CYTOVALE_PROJECT, CYTOVALE_DEV_IMAGE)
 end
 
 desc "Build the #{CYTOVALE_IMAGE} for the #{CYTOVALE_PROJECT} project"

@@ -21,4 +21,5 @@ RDEPENDS_${PN} = " cym-application \
                    python3-six \
                    python3-spidev \
                    firefox \
+                   openssh \
 "
