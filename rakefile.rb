@@ -5,7 +5,7 @@ RELEASE_FOLDER=File.join(PROJECT_ROOT, "release")
 DOCKER_EXECUTE_SCRIPT = File.join(PROJECT_ROOT, "docker", "sync-oe-execute")
 # Defines for the cytovale image
 CYTOVALE_PROJECT = "cytovale-build"
-CYTOVALE_IMAGE = "angstrom-lxde-image"
+CYTOVALE_IMAGE = "cytovale-cym-image"
 
 def bitbake(project, image)
   cmd = "#{RUN_SCRIPT} #{project} \"bitbake #{image}\""
