@@ -13,6 +13,33 @@ sudo apt-get install rake
 sudo snap install docker
 ```
 
+### Configure Docker
+
+```
+sudo groupadd docker 
+sudo usermod -aG docker $USER
+```
+
+Log out and back in after this step
+
+### Build docker image
+
+`rake docker_image`
+
+### Add Github SSH Keys
+
+In order to access private github repos, you'll need to add an SSH key.  
+
+Bring up a shell for the docker image by executing `./docker/sync-oe-shell`
+
+Generate a new keypair by executing `ssh-keygen`. 
+
+Get your public key by running `cat id_rsa.pub`
+
+Add your public key to your [github account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+
+Test your connection by executing `ssh -v git@github.com`
+
 ### Build the release package
 
 ```
