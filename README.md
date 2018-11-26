@@ -1,3 +1,5 @@
+# Building the BSP
+
 ## Building with Docker Image
 
 ### Download this repo
@@ -84,3 +86,50 @@ Build the target machine by running the setup build step, then
 `bitbake core-image-minimal`
 or
 `bitbake angstrom-lxde-image`
+
+# Using the BSP
+
+## Load Image via TFTP
+
+### Install a TFTP Server
+
+*TODO: Describe how to do this in a VM*
+
+
+### Generate Install Media
+
+#### Extract Installation Package
+
+```
+cd .../deploy/images/apalis-imx6
+sudo tar xf Apalis-iMX6_LXDE-Image_VERSION_INFO.tar.bz2
+cd Apalis-iMX6_LXDE-Image_VERSION_INFO
+```
+
+#### Generate Image Files
+
+`./update.sh -o TFTP_SERVER_DIRECTORY`
+
+#### Update the system image
+
+Press any key during initial boot to bring up the uboot prompt
+
+* Remove the SD Card
+* Set Host IP
+  * e.g. `setenv serverip 10.0.0.105`
+* Set Client IP
+  * TODO: DHCP?
+  * e.g. `setenv ipaddr 10.0.0.33`
+* Prepare Update
+  * `run setupdate`
+* Install Update
+  * **Warning: This will obliterate any existing data**
+  * `run update`
+
+## Add SSH Key
+
+### Development
+
+### Production
+
+TBD

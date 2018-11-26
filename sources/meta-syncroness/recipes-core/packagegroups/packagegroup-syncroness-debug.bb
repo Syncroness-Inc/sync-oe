@@ -1,4 +1,4 @@
-SUMMARY = "Packages by syncroness developers"
+SUMMARY = "Packages used by syncroness developers"
 PR = "r1"
 
 inherit packagegroup
