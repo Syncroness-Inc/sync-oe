@@ -116,16 +116,15 @@ Press any key during initial boot to bring up the uboot prompt
 
 * Remove the SD Card
 * Set Host IP
-** e.g. `setenv serverip 10.0.0.105`
+  * e.g. `setenv serverip 10.0.0.105`
 * Set Client IP
-** TODO: DHCP?
-** e.g. `setenv ipaddr 10.0.0.33`
-** 
+  * TODO: DHCP?
+  * e.g. `setenv ipaddr 10.0.0.33`
 * Prepare Update
-** `run setupdate`
+  * `run setupdate`
 * Install Update
-** **Warning: This will obliterate any existing data**
-** `run update`
+  * **Warning: This will obliterate any existing data**
+  * `run update`
 
 ## Add SSH Key
 
