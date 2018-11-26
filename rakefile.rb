@@ -43,6 +43,10 @@ task :docker_image do
   end
 end
 
+task :cytovale_clean => [:docker_image] do
+  bitbake(CYTOVALE_PROJECT, "-c cleanall #{CYTOVALE_IMAGE}")
+end
+
 desc "Build the #{CYTOVALE_IMAGE} for the #{CYTOVALE_PROJECT} project"
 task :cytovale_image => [:docker_image] do
   bitbake(CYTOVALE_PROJECT, CYTOVALE_IMAGE)
