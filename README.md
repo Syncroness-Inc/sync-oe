@@ -130,6 +130,10 @@ Press any key during initial boot to bring up the uboot prompt
 
 ### Development
 
+Add your public SSH key to the authorized_keys list by executing:
+
+`cat ~/.ssh/id_rsa.pub >> .../sources/meta-cytovale/ecipes-connectivity/openssh/openssh/cytovale/authorized_keys`
+
 ### Production
 
 TBD
