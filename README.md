@@ -3,7 +3,7 @@
 ### Download this repo
 
 ```
-git clone --recursive -b rocko-cytovale git@github.com:Syncroness-Inc/sync-oe.git
+git clone --recursive -b rocko git@github.com:Syncroness-Inc/sync-oe.git
 ```
 
 ### Install Packages
