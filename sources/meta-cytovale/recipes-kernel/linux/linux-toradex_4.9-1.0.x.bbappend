@@ -5,6 +5,6 @@ LOCALVERSION = "-${TDX_VER_ITEM}"
 SRC_URI = "git://github.com/Syncroness-Inc/linux-toradex-imx.git;protocol=git;branch=${SRCBRANCH} \
            file://defconfig"
 
-SRCREV = "c5f05bd68e1ad99d43e2a7a7123e0f994ed17f56"
+SRCREV = "098224fecebf278d154c35ab8f3c4430ab17d5c0"
 
 LOCALVERSION = "-${TDX_VER_ITEM}"
