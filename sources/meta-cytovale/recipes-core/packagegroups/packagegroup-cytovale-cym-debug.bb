@@ -3,5 +3,5 @@ PR = "r1"
 
 inherit packagegroup
 
-RDEPENDS_${PN} = " packagegroup-syncroness-debug \ 
-		   git "
+RDEPENDS_${PN} = " packagegroup-syncroness-debug \
+		   git \"
