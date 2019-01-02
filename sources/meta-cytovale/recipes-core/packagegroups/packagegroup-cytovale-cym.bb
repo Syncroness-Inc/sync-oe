@@ -24,4 +24,5 @@ RDEPENDS_${PN} = " cym-application \
                    openssh \
                    nano \
                    vim \
+                   init-ifupdown \
 "
