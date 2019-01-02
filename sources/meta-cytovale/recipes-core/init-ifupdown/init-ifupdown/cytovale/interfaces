@@ -4,17 +4,12 @@
 auto lo
 iface lo inet loopback
 
-# TODO: Verify name of onboard ethernet interface (eth0?)
-# The CYM is assigned an IP address of 10.0.0.0 and MAC address of 02:00:00:00:00:00
-auto eth0
-iface eth0 inet manual
-        hwaddress ether 02:00:00:00:00:00
-
 # The primary network interface
 auto eth0
 iface eth0 inet static
         address 10.0.0.0
         netmask 255.255.255.0
+        hwaddress ether 02:00:00:00:00:00
 
 
 # TODO: Verify name of USB-ethernet interface (eth1?)
