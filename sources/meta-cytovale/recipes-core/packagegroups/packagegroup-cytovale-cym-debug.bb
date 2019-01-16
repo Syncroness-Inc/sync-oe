@@ -5,5 +5,4 @@ inherit packagegroup
 
 RDEPENDS_${PN} = " packagegroup-syncroness-debug \
 		   git \
-			 ifupdown \
-			 "
+		 "
