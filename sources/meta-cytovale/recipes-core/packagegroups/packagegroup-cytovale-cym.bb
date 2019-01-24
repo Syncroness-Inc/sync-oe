@@ -12,6 +12,7 @@ RDEPENDS_${PN} = " cym-application \
                    python3-smbus2 \
                    python3-modbus-tk \
                    python3-numpy \
+		   python3-matplotlib \
                    python3-django \
                    python3-console-menu \
                    python3-opencv \
