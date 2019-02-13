@@ -18,7 +18,7 @@ RDEPENDS_${PN} = " cym-application \
                    python3-opencv \
                    python3-cobs \
                    python3-crc8 \
-                   python3-crc32c \
+                   python3-crccheck \
                    python3-six \
                    python3-spidev \
                    firefox \
