@@ -10,5 +10,6 @@ inherit setuptools3
 
 do_install_append () {
 	install -d ${D}${bindir}
-	install -m 0755 motion_demo.py ${D}${bindir}
+	install -m 0755 tc2_console.py ${D}/home/root
+	install -m 0755 tc0_console.py ${D}/home/root
 }
