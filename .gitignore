@@ -5,6 +5,7 @@ deploy
 !*build/conf
 !*build/conf/bblayers.conf
 !*build/conf/local.conf
+!*build/.build_num
 *build/conf/sanity_info
 */*.log
 *.log

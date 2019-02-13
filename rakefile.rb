@@ -49,7 +49,14 @@ end
 
 desc "Build the #{CYTOVALE_IMAGE} for the #{CYTOVALE_PROJECT} project"
 task :cytovale_image => [:docker_image] do
-  bitbake(CYTOVALE_PROJECT, CYTOVALE_IMAGE)
+  if File.file?("#{CYTOVALE_PROJECT}/.build_num")
+    build_num = File.read("#{CYTOVALE_PROJECT}/.build_num").to_i + 1
+  else
+    build_num = 0
+  end
+  `echo #{build_num} > #{CYTOVALE_PROJECT}/.build_num`
+  `echo 'CYM_BSP_BUILD_NUMBER = "#{build_num}"' > #{CYTOVALE_PROJECT}/.extras.conf`
+  bitbake(CYTOVALE_PROJECT, "--postread=.extras.conf #{CYTOVALE_IMAGE}")
 end
 
 desc "Build a release package for the Cytovale project"
