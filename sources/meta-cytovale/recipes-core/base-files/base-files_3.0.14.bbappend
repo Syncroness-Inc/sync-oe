@@ -21,5 +21,8 @@ do_install_append () {
     fi
     echo "Version: ${CYM_BSP_VERSION} Build: ${CYM_BSP_BUILD_NUMBER}" >> ${D}${sysconfdir}/issue
     echo "Version: ${CYM_BSP_VERSION} Build: ${CYM_BSP_BUILD_NUMBER}" >> ${D}${sysconfdir}/issue.net
+    echo "Application Version: ${CYM_APPLICATION_VERSION}" >> ${D}${sysconfdir}/issue
+    echo "Application Version: ${CYM_APPLICATION_VERSION}" >> ${D}${sysconfdir}/issue.net
+
 }
 
