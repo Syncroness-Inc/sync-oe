@@ -1,0 +1,28 @@
+From fad85513f58ff38af54b4dcbf80d139a778d657f Mon Sep 17 00:00:00 2001
+From: Adam <PseudoDesign@users.noreply.github.com>
+Date: Mon, 18 Feb 2019 12:14:10 -0700
+Subject: [PATCH] disable screen clearing
+
+---
+ consolemenu/screen.py | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+diff --git a/consolemenu/screen.py b/consolemenu/screen.py
+index 4a22b7f..48d4b2b 100644
+--- a/consolemenu/screen.py
++++ b/consolemenu/screen.py
+@@ -39,10 +39,7 @@ class Screen(object):
+ 
+     @staticmethod
+     def clear():
+-        if platform.system() == 'Windows':
+-            os.system('cls')
+-        else:
+-            os.system('clear')
++        pass
+ 
+     def input(self, prompt='', validators=None, default=None, enable_quit=False, quit_string='q',
+               quit_message='(enter q to Quit)'):
+-- 
+2.7.4
+
