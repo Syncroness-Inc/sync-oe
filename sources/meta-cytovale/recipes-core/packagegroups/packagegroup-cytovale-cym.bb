@@ -22,10 +22,10 @@ RDEPENDS_${PN} = " cym-application \
                    python3-six \
                    python3-spidev \
 		   usb-tty \
-                   firefox \
                    openssh \
                    nano \
                    vim \
                    init-ifupdown \
 		   chromium-x11 \
+		   cym-services \
 "
