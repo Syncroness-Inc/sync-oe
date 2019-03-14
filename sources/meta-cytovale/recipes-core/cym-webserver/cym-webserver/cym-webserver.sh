@@ -1,4 +1,4 @@
-export APP_ROOT_DIR=/home/root/dev-cytovale-sw
+export APP_ROOT_DIR=/home/root/cytovale-sw
 export PYTHONPATH=${APP_ROOT_DIR}/cytovale_app/:${APP_ROOT_DIR}/cytovale_app/cytovale_django
 export PYTHONUNBUFFERED=1
 
