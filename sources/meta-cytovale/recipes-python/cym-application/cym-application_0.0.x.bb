@@ -7,7 +7,7 @@ S = "${WORKDIR}/git/cytovale_app"
 
 inherit setuptools3
 
-RDEPENDS_${PN} += "bash cym-webserver"
+RDEPENDS_${PN} += "bash cym-webserver "
 
 do_install_append () {
 	install -d ${D}/home/root/cytovale-sw
