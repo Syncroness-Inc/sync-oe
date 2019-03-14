@@ -26,6 +26,4 @@ RDEPENDS_${PN} = " cym-application \
                    nano \
                    vim \
                    init-ifupdown \
-		   cym-webserver \
-		   chromium-kiosk \
 "
