@@ -33,7 +33,7 @@
 	url = git://git.toradex.com/meta-toradex-bsp-common.git
 [submodule "sources/meta-toradex-demos"]
 	path = sources/meta-toradex-demos
-	url = git://git.toradex.com/meta-toradex-demos.git
+	url = git@github.com:Syncroness-Inc/meta-toradex-demos.git
 [submodule "sources/meta-toradex-nxp"]
 	path = sources/meta-toradex-nxp
 	url = git://git.toradex.com/meta-toradex-nxp.git
