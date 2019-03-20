@@ -26,5 +26,4 @@ RDEPENDS_${PN} = " cym-application \
                    nano \
                    vim \
                    init-ifupdown \
-		   chromium-x11 \
 "
