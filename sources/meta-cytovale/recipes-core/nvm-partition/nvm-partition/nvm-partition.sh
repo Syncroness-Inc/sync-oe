@@ -13,13 +13,13 @@ if [ $? -eq 0 ]; then
 else
 	mkfs.ext4 -q ${NODE}
 	if [ $? -ne 0 ]; then
-		echo "Error occured when creating NVM partition
+		echo "Error occured when creating NVM partition"
 	fi
 	mount ${NODE} ${MOUNTPOINT}
 	if [ $? -eq 0 ]; then
 		echo "Successfully mounted new NVM Partition at ${MOUNTPOINT}"
 	else
-		echo "ERROR: Unable to mount NVM partition ${NODE} to ${MOUNTPOINT}
+		echo "ERROR: Unable to mount NVM partition ${NODE} to ${MOUNTPOINT}"
 	fi
 fi
 
