@@ -1,9 +1,11 @@
 [Unit]
 Description=Cytovale Application Service
+After=cym-webserver.service
 
 [Service]
 Type=notify
 ExecStart=/bin/bash -c "/home/root/cym-app-startup.sh"
 
 [Install]
-After=cym-webserver.service
+After=multi-user.target
+WantedBy=multi-user.target

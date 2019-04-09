@@ -1,9 +1,11 @@
 [Unit]
 Description=Cytovale Django Webserver
+After=nvm-partition.service
 
 [Service]
 Type=notify
 ExecStart=/bin/bash -c "/home/root/cym-webserver.sh"
 
 [Install]
-After=nvm-partition.service
+After=multi-user.target
+WantedBy=multi-user.target
