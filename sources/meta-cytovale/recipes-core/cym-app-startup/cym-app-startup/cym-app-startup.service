@@ -1,5 +1,6 @@
 [Unit]
 Description=Cytovale Application Service
+After=cym-webserver.service
 
 [Service]
 Type=notify
