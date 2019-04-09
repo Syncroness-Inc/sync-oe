@@ -7,5 +7,4 @@ Type=notify
 ExecStart=/bin/bash -c "/home/root/cym-webserver.sh"
 
 [Install]
-After=multi-user.target
-WantedBy=multi-user.target
+WantedBy=nvm-partition.service
