@@ -5,7 +5,7 @@ diff --git a/data/lxdm.conf.in b/data/lxdm.conf.in
  
  [server]
  ## arg used to start xserver, not fully function
--arg=/usr/bin/X -s 0
+-# arg=/usr/bin/X -background vt1
 +arg=/usr/bin/X -s 0 -nocursor
  # uncomment this if you really want xserver listen to tcp
  # tcp_listen=1
