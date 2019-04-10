@@ -1,0 +1,10 @@
+[Unit]
+Description=Cytovale Application Service
+After=multi-user.target
+
+[Service]
+Type=notify
+ExecStart=/bin/bash -c "/home/root/touchscreen-rotate.sh"
+
+[Install]
+WantedBy=multi-user.target

@@ -26,4 +26,5 @@ RDEPENDS_${PN} = " cym-application \
                    nano \
                    vim \
                    init-ifupdown \
+		   touchscreen-rotate \
 "
