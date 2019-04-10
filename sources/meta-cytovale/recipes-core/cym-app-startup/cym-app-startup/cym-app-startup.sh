@@ -4,7 +4,7 @@ export PYTHONUNBUFFERED=1
 
 cd ${APP_ROOT_DIR}/cytovale_app
 
-echo "Running"
+python3 run.py --mock
 
 while true; do
   systemd-notify READY=1
