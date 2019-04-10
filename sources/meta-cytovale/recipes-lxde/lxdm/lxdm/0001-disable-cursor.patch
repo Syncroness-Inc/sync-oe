@@ -1,0 +1,12 @@
+diff --git a/data/lxdm.conf.in b/data/lxdm.conf.in
+--- a/data/lxdm.conf.in
++++ b/data/lxdm.conf.in
+@@ -23,7 +23,7 @@
+ 
+ [server]
+ ## arg used to start xserver, not fully function
+-arg=/usr/bin/X -s 0
++arg=/usr/bin/X -s 0 -nocursor
+ # uncomment this if you really want xserver listen to tcp
+ # tcp_listen=1
+ # uncoment this if you want reset the xserver after logou
