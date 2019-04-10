@@ -1,9 +1,0 @@
-#!/bin/sh
-
-#https://wiki.archlinux.org/index.php/LXDE#LXDM
-
-# Kills all your processes when you log out.
-killall --user $USER -TERM
-
-# Set's the desktop background to solid black. Useful if you have multiple monitors.
-xsetroot -solid black
