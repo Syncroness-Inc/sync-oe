@@ -1,0 +1,9 @@
+diff --git a/10-evdev.conf b/10-evdev.conf
+--- a/10-evdev.conf
++++ b/10-evdev.conf
+@@ -37,4 +37,5 @@
+         MatchIsTouchscreen "on"
+         MatchDevicePath "/dev/input/event*"
+         Driver "evdev"
++	Option "InvertY" "true"
+ EndSection
