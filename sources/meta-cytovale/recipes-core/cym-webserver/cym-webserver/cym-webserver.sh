@@ -10,7 +10,6 @@ python3 cytovale_django/manage.py runserver 0.0.0.0:8000 &
 
 # TODO: Test if server is still running
 
-echo 1 >> /sys/class/graphics/fb0/rotate
 touch /tmp/cym-webserver-running
 
 while true; do

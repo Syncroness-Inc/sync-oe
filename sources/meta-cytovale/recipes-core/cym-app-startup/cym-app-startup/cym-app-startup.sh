@@ -4,7 +4,8 @@ export PYTHONUNBUFFERED=1
 
 cd ${APP_ROOT_DIR}/cytovale_app
 
-python3 run.py --mock
+file=$(date '+%Y-%m-%d_%H-%M-%S')_app.log
+python3 run.py --debug --verbose | tee /mnt/nvm/console_logs/$file &
 
 while true; do
   systemd-notify READY=1
