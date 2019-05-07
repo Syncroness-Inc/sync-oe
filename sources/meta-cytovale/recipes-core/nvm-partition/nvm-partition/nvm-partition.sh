@@ -5,9 +5,6 @@
 MOUNTPOINT="/mnt/nvm"
 NODE="/dev/mmcblk0p3"
 
-# Rotate the screen before anything else
-echo 1 >> /sys/class/graphics/fb0/rotate
-
 mkdir -p ${MOUNTPOINT}
 umount ${MOUNTPOINT}
 mount ${NODE} ${MOUNTPOINT}

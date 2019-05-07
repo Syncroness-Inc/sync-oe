@@ -7,7 +7,7 @@ cd ${APP_ROOT_DIR}/cytovale_app
 file=$(date '+%Y-%m-%d_%H-%M-%S')_app.log
 python3 run.py --debug --verbose | tee /mnt/nvm/console_logs/$file &
 
-while true; do
-  systemd-notify READY=1
-  sleep 60
-done
+#while true; do
+#  systemd-notify READY=1
+#  sleep 60
+#done
