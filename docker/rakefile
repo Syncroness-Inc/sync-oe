@@ -4,7 +4,7 @@ USERNAME = "oe-user"
 WORKING_CONTAINER = "sync-oe"
 
 task :image do
-  sh "docker build -t #{DOCKER_IMAGE} #{RAKEFILE_DIR}"
+  sh "docker build --no-cache -t #{DOCKER_IMAGE} #{RAKEFILE_DIR}"
 end
 
 task :root_shell do

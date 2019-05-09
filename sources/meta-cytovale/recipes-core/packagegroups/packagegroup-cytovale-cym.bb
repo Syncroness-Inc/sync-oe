@@ -27,4 +27,5 @@ RDEPENDS_${PN} = " cym-application \
                    vim \
                    init-ifupdown \
 		   touchscreen-rotate \
+		   update-script \
 "
