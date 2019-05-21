@@ -3,7 +3,8 @@ Description=Low Level Hardware Init
 After=basic.target
 
 [Service]
-Type=notify
+Type=oneshot
+RemainAfterExit=true
 ExecStart=/etc/init-lowlevel.sh
 
 [Install]
