@@ -1,10 +1,10 @@
 [Unit]
 Description=Low Level Hardware Init
-After=multi-user.target
+After=basic.target
 
 [Service]
 Type=notify
 ExecStart=$LOWLEVEL_INIT_LOCATION
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=cym-app-startup.service
