@@ -1,0 +1,10 @@
+[Unit]
+Description=Low Level Hardware Init
+After=multi-user.target
+
+[Service]
+Type=notify
+ExecStart=$LOWLEVEL_INIT_LOCATION
+
+[Install]
+WantedBy=multi-user.target
