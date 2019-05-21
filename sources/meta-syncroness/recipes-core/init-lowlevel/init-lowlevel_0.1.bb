@@ -18,12 +18,6 @@ LOWLEVEL_INIT_LOCATION ?= "/etc/${PN}.sh"
 # Install the 'envsubst' package
 DEPENDS = "gettext-native"
 
-do_configure() {
-	# Update the "LOWLEVEL_INIT_LOCATION" variable in the service script
-	envsubst < "${WORKDIR}/${PN}.service" > "${WORKDIR}/${PN}.service.tmp"
-	mv "${WORKDIR}/${PN}.service.tmp" "${WORKDIR}/${PN}.service"
-}
-
 do_install() {
 	# Install the service description
 	install -d "${D}${sysconfdir}/systemd/system"
