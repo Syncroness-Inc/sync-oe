@@ -30,7 +30,7 @@ do_install() {
 }
 
 #Pack the path
-FILES_${PN} += "/home/root"
+FILES_${PN} += "/etc"
 FILES_${PN} += "${sysconfdir}/systemd/system"
 
 REQUIRED_DISTRO_FEATURES= "systemd"
