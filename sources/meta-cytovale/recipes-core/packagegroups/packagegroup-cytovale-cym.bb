@@ -30,4 +30,5 @@ RDEPENDS_${PN} = "\
     touchscreen-rotate \
     update-script \
     init-lowlevel \
+    sox \
 "
