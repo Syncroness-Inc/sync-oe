@@ -7,7 +7,7 @@ S = "${WORKDIR}/git/cytovale_app"
 
 inherit setuptools3
 
-RDEPENDS_${PN} += "bash cym-webserver nvm-partition cym-app-startup"
+RDEPENDS_${PN} += "bash nvm-partition cym-app-service"
 
 do_install_append () {
 	install -d ${D}/home/root/cytovale-sw

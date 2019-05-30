@@ -1,0 +1,17 @@
+[Unit]
+Description=Cytovale Application Service
+After=nvm-partition.service
+
+[Service]
+Type=forking
+TimeoutStartSec=300
+ExecStart=/bin/bash -c "/home/root/cytovale-sw/scripts/start.sh"
+NotifyAccess=all
+WatchdogSec=60
+Restart=always
+StartLimitInterval=5min
+StartLimitBurst=1
+StartLimitAction=reboot-immediate
+
+[Install]
+WantedBy=multi-user.target
