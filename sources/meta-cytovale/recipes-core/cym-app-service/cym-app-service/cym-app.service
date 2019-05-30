@@ -16,4 +16,3 @@ StartLimitAction=reboot-immediate
 
 [Install]
 WantedBy=multi-user.target
-Wants=init-lowlevel.service
