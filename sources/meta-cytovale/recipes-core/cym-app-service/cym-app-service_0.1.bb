@@ -9,7 +9,11 @@ SRC_URI+= "file://cym-app.service"
 
 S = "${WORKDIR}"
 
-SYSTEMD_SERVICE_${PN} = "cym-app.service"
+python () {
+    if d.getVar("RUN_CYM_ON_STARTUP", True):
+        d.setVar("SYSTEMD_SERVICE_cym-app-service", "cym-app.service")
+}
+
 
 do_install() {
              install -d ${D}${sysconfdir}/systemd/system

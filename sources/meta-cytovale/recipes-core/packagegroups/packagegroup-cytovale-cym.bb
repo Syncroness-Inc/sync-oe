@@ -22,6 +22,7 @@ RDEPENDS_${PN} = "\
     python3-crccheck \
     python3-six \
     python3-spidev \
+    python3-sdnotify \
     usb-tty \
     openssh \
     nano \
