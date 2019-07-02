@@ -23,6 +23,7 @@ RDEPENDS_${PN} = "\
     python3-six \
     python3-spidev \
     python3-sdnotify \
+    python3-netifaces \
     usb-tty \
     openssh \
     nano \
