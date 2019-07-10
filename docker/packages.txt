@@ -1,3 +1,5 @@
+screen
+libncurses-dev
 libatomic-ops-dev
 python3
 vim
