@@ -4,11 +4,11 @@ After=nvm-partition.service
 
 [Service]
 Type=notify
-TimeoutStartSec=300
+TimeoutStartSec=600
 ExecStart=/bin/bash -c "/home/root/cytovale-sw/scripts/start.sh"
 ExecStop=/bin/bash -c "/home/root/cytovale-sw/scripts/stop.sh"
 NotifyAccess=all
-WatchdogSec=60
+WatchdogSec=300
 Restart=always
 StartLimitInterval=180min
 StartLimitBurst=1
