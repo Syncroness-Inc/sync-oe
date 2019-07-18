@@ -2,7 +2,7 @@ DESCRIPTION = "Cytovale Cytometry Module Application Software"
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 LICENSE = "CLOSED"
 
-SRC_URI = "git://git@github.com/syncroness-inc/cytovale-sw.git;tag=${CYM_APPLICATION_VERSION};protocol=ssh \
+SRC_URI = "git://git@github.com/syncroness-inc/cytovale-sw.git;branch=${CYM_APPLICATION_BRANCH};tag=${CYM_APPLICATION_VERSION};protocol=ssh \
 		   file://purge_old_results"
 
 S = "${WORKDIR}/git/cytovale_app"
