@@ -9,14 +9,13 @@ S = "${WORKDIR}"
 inherit useradd
 
 USERADD_PACKAGES = "${PN}"
-USERADD_PARAM_${PN} = "-u 1200 -d /home/cym-user -m -s /bin/bash cym-user"
+USERADD_PARAM_${PN} = "-u 1200 -d /home/cym-user -m -s /bin/bash -p '' cym-user"
 
-GROUPADD_PARAM_${PN} = "-g 880 group1"
+GROUPADD_PARAM_${PN} = "-g 880 cym-user"
 
 do_install () {
     install -d -m 755 ${D}/home/cym-user
-
-    chown -R cym-user ${D}/home/cym-user
+    chown -R cym-user:cym-user ${D}/home/cym-user
 }
 
 FILES_${PN} = "/home/cym-user"
