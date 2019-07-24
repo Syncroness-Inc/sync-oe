@@ -5,7 +5,5 @@ After=multi-user.target
 [Service]
 Type=oneshot
 ExecStart=/bin/bash -c "/home/root/nvm-partition.sh"
+RemainAfterExit=True
 
-[Install]
-After=multi-user.target
-WantedBy=multi-user.target

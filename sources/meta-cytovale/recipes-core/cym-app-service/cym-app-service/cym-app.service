@@ -1,6 +1,6 @@
 [Unit]
 Description=Cytovale Application Service
-After=nvm-partition.service
+Requires=nvm-partition.service
 
 [Service]
 Type=notify
@@ -8,11 +8,11 @@ TimeoutStartSec=600
 ExecStart=/bin/bash -c "/home/root/cytovale-sw/scripts/start.sh"
 ExecStop=/bin/bash -c "/home/root/cytovale-sw/scripts/stop.sh"
 NotifyAccess=all
-WatchdogSec=300
+WatchdogSec=30
 Restart=always
 StartLimitInterval=180min
 StartLimitBurst=1
 StartLimitAction=reboot-immediate
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=graphical.target
