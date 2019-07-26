@@ -24,6 +24,7 @@ RDEPENDS_${PN} = "\
     python3-spidev \
     python3-sdnotify \
     python3-netifaces \
+    python3-django-cors-headers \
     usb-tty \
     openssh \
     nano \
