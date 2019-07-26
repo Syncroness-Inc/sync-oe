@@ -33,5 +33,4 @@ RDEPENDS_${PN} = "\
     update-script \
     init-lowlevel \
     sox \
-    cym-user \
 "
