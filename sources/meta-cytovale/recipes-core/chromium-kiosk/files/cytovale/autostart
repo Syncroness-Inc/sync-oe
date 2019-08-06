@@ -1,0 +1,13 @@
+@lxpanel --profile LXDE
+@pcmanfm --desktop --profile LXDE
+#@xscreensaver -no-splash
+
+# disable power management / screen blanking
+@xset s off
+@xset -dpms
+@xset s noblank
+
+# Disable any error messages that may be generated WRT chromium errors
+@sed -i 's/"exited_cleanly": false/"exited_cleanly": true/' ~/.config/chromium/Default/Preferences
+
+@chromium -use-gl=egl --no-sandbox --kiosk --disable-gpu --disable-pinch --incognito --noerrdialogs --no-first-run --disable-infobars --overscroll-history-navigation=0s --app=file:///home/root/cytovale-sw/cytovale_app/cytovale_django/cytovale_django/static/startup.html
