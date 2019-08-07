@@ -42,7 +42,11 @@ Add your public key to your [github account](https://help.github.com/articles/ad
 
 Test your connection by executing `ssh -v git@github.com`
 
+Exit the contaner by running `exit`
+
 ### Build the release package
+
+From the host OS command line, run
 
 ```
 rake cytovale_release
