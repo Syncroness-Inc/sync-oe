@@ -60,8 +60,10 @@ task :cytovale_image => [:docker_image] do
 end
 
 desc "Build a release package for the Cytovale project"
-task :cytovale_release => [:cytovale_image] do
+# task :cytovale_release => [:cytovale_image] do
+task :cytovale_release do
   build_time = Time.now.strftime("%Y-%m-%d-%H-%M-%S")
+  build_date_str = Time.now.getutc.strftime("%Y%m%d")
   release_directory = File.join(RELEASE_FOLDER, CYTOVALE_PROJECT, CYTOVALE_IMAGE, build_time)
   deploy_dir = File.join(PROJECT_ROOT, "deploy", "images", "apalis-imx6")
 
@@ -76,7 +78,6 @@ task :cytovale_release => [:cytovale_image] do
   dtb_file = File.join(deploy_dir, "zImage-imx6q-apalis-eval.dtb")
   FileUtils.cp(linux_image, linux_directory)
   FileUtils.cp(dtb_file, linux_directory)
-  # TODO: Get linux version (or just manually grab it) 
 
   # Get our Rootfs and the package manifest
   rootfs_directory = File.join(release_directory, "rootfs")
@@ -85,4 +86,26 @@ task :cytovale_release => [:cytovale_image] do
   rootfs_manifest = File.join(deploy_dir, "LXDE-Image-apalis-imx6.manifest")
   FileUtils.cp(rootfs_tarball, rootfs_directory)
   FileUtils.cp(rootfs_manifest, rootfs_directory)
+
+  # Create the install package zip file by running the update.sh script
+  release_tag = "Apalis-iMX6_LXDE-Image_2.8"
+  working_dir = File.join(release_directory, ".tmp/deploy")
+  update_zip = File.join(release_directory, "cym-bsp-install-package.zip")
+  release_tarball = File.join(deploy_dir, "#{release_tag}b4-#{build_date_str}.tar.bz2")
+  update_binaries_dir = File.join(working_dir, "tftpboot")
+  update_script_dir = File.join(working_dir, release_tag+".4")
+
+  mkdir_p working_dir
+  mkdir_p update_binaries_dir
+  begin
+    puts "root permission is required to properly set the file permissions on the release tarball"
+    `sudo tar xf "#{release_tarball}" -C "#{working_dir}"`
+    `(cd "#{update_script_dir}" && ./update.sh -o '#{update_binaries_dir}')`
+    `(cd "#{working_dir}"; zip -r "#{update_zip}" tftpboot)`
+  ensure
+    # remove the working directory
+    puts "root permission is required to remove the working directory"
+    `sudo rm -r "#{working_dir}"`
+  end
+
 end
