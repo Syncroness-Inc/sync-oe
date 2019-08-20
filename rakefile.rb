@@ -60,8 +60,7 @@ task :cytovale_image => [:docker_image] do
 end
 
 desc "Build a release package for the Cytovale project"
-# task :cytovale_release => [:cytovale_image] do
-task :cytovale_release do
+task :cytovale_release => [:cytovale_image] do
   build_time = Time.now.strftime("%Y-%m-%d-%H-%M-%S")
   build_date_str = Time.now.getutc.strftime("%Y%m%d")
   release_directory = File.join(RELEASE_FOLDER, CYTOVALE_PROJECT, CYTOVALE_IMAGE, build_time)
