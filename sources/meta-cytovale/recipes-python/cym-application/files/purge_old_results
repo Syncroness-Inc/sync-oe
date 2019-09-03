@@ -7,3 +7,4 @@ export PYTHONUNBUFFERED=1
 cd ${APP_ROOT_DIR}/cytovale_app
 
 python3 cytovale_django/manage.py purge_old_results
+python3 cytovale_django/manage.py purge_old_notifications
