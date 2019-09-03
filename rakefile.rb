@@ -69,6 +69,13 @@ task :cytovale_release => [:cytovale_image] do
   build_info_directory = File.join(release_directory, "build_info")
   write_host_info(build_info_directory)
   write_docker_image_info(build_info_directory)
+  
+  # Copy and parse the licenses manifest
+  licenses_manifest = File.join(PROJECT_ROOT, "deploy", "licenses", "apalis_imx6", "Apalis-iMX6_LXDE-Image", "license.manifest")
+  licenses_list  = File.join(build_info_directory, "licenses.txt")
+  license_parsing_script = File.join(PROJECT_ROOT, "scripts", "license_manifest_parser.py")
+  FileUtils.cp(licenses_manifest, build_info_directory)
+  `python3 "#{license_parsing_script}" "#{licenses_manifest}" "#{licenses_list}"`
 
   # Get our Linux binaries
   linux_directory =  File.join(release_directory, "linux")
@@ -85,6 +92,8 @@ task :cytovale_release => [:cytovale_image] do
   rootfs_manifest = File.join(deploy_dir, "LXDE-Image-apalis-imx6.manifest")
   FileUtils.cp(rootfs_tarball, rootfs_directory)
   FileUtils.cp(rootfs_manifest, rootfs_directory)
+
+
 
   # Create the install package zip file by running the update.sh script
   release_tag = "Apalis-iMX6_LXDE-Image_2.8"
