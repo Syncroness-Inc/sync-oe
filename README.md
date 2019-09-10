@@ -162,23 +162,108 @@ A collection of baseline layers for OpenEmbedded-based distributions.
 
 #### meta-freescale / meta-freescale-3rdparty / meta-freescale-distro
 
-These layers are maintained by Freescale, the manufacturer of the core SoC used in the CytoVale CYM.  These recipes include low-level platform init configurations, proprietary SoC driver binaries, and OpenEmbedded machine definitions for Freescale hardware.
+These layers are maintained by Freescale, the manufacturer of the core SoC used in the CytoVale CYM.  The recipes include low-level platform init configurations, proprietary SoC driver binaries, and OpenEmbedded machine definitions for Freescale hardware.
 
-#### meta-toradex-bsp-common
+#### meta-toradex-bsp-common / meta-toradex-demos / meta-toradex-nxp
 
-#### meta-toradex-demos
-
-#### meta-toradex-nxp
+These layers are maintained by Toradex, the manufacturer of the SOM used in the CytoVale CYM.  The recipes extend the `meta-freescale` layers to include platform-specific configurations and prepares the machine definitions for use with the `meta-angstrom` layer.
 
 #### meta-lxde
 
+This layer provides recipes for the LXDE desktop environment.
+
 #### meta-browser
+
+This layer provides recipes for the Chromium web browser.
 
 #### meta-qt4 / meta-qt5 / meta-qt5-extra
 
-These recipes are required by the `meta-toradex-demos` layer.
-
-#### meta-cytovale
+These layers are required by the `meta-toradex-demos` layer.  QT binaries are not installed on the CytoVale CYM.
 
 #### meta-syncroness
 
+The `meta-sycroness` layer includes custom recipes developed within Syncroness used to implement reusable features on a BSP.
+
+##### recipes-core
+
+###### init-lowlevel
+
+This recipe creates a systemd task to run a bash script early during the init process.
+
+###### packagegroups
+
+This inclues a list of common packages used by Syncroness developers.
+
+###### touchscreen-rotate
+
+This creates a systemd task to rotate the touch screen input.
+
+#### meta-cytovale
+
+The `meta-cytovale` layer includes custom recipes developed specifically for the Cytovale CYM.
+
+##### recipes-angstrom
+
+###### angstrom-version
+
+This recipe extends the angstrom-version recipe and appends the CytoVale BSP and Application version information.
+
+##### recipes-connectivity
+
+###### openssh
+
+This recipe extends the openssh recipe.  It adds the Syncroness/Cytovale developer SSH keys located in the `authorized_keys` file to the list of approved SSH connections, and configures sshd to disable password-based connections.
+
+##### recipes-core
+
+###### base-files
+
+This recipe appends version information to the `/etc/issue` file.
+
+###### chromium-kiosk
+
+This recipe appends the LXDE recipe.  It modifies the `autostart` file to disable the traditional desktop environment and run Chromium in kiosk mode on startup.
+
+###### cym-app-service
+
+This recipe creates a systemd task to start the CYM application and webserver.  The systemd task includes an application watchdog, and will reboot the system if the application becomes unresponsive.
+
+###### images
+
+This recipe appends the `angstrom-lxde-image` recipe to include the Cytovale packagegroups in the installation.
+
+###### init-ifupdown
+
+This recipe configures the network interfaces for the CYM.  The on-board ethernet adapter (eth0) is configured with a static IP of `10.0.0.2`.  The USB/Ethernet adapter (eth1) is configured to request an IP address using DHCP.
+
+If (eth1) requires a static IP, this recipe is the correct place to configure said IP.
+
+###### init-lowlevel
+
+This recipe appends the Syncroness-layer `init-lowlevel` recipe to run the CYM application's "init_lowlevel.sh" file on startup.
+
+###### nvm-partition
+
+This recipe creates a systemd task to initialize and mount the NVM partition.
+
+###### packagegroups
+
+This recipe is a list of all external packages required by the CYM system.
+
+###### update-script
+
+This recipe compiles and installs the `boot.scr` script.  This script is used to update the CYM BSP via uboot.
+
+###### usb-tty
+
+This recipe contains udev rules for the CYM's USB peripreals.  This results in the USB-TTY device nodes being mounted at a consistent location, such as `/dev/tty_pressure`.
+
+##### recipes-devtools
+
+##### recipes-graphics
+
+##### recipes-kernel
+
+##### recipes-lxde
+
+##### recipes-python
