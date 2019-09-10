@@ -196,7 +196,7 @@ This inclues a list of common packages used by Syncroness developers.
 
 ###### touchscreen-rotate
 
-This creates a systemd task to rotate the touch screen input.
+This creates a systemd task to rotate the touch screen video.
 
 #### meta-cytovale
 
@@ -260,10 +260,22 @@ This recipe contains udev rules for the CYM's USB peripreals.  This results in t
 
 ##### recipes-devtools
 
+This layer contains recipes for Python packages required by the CYM BSP.  Each Python package pulled from [PyPI](https://pypi.org) requires a unique OpenEmbedded recipe for installation.  These recipes simply point to the releavent PyPI package and uses existing OpenEmbedded tools to install them.
+
 ##### recipes-graphics
+
+###### xf86-input-evdev
+
+This recipe appends the [xorg driver](https://wiki.archlinux.org/index.php/Xorg) to rotate the touchscreen's touch data input.
 
 ##### recipes-kernel
 
+This recipe changes the Linux source code repository to one controlled by Syncroness.  The baseline of this repository is the Linux kernel provided by Toradex
+
 ##### recipes-lxde
 
+These recipes append LXDE to disable the mouse cursor.
+
 ##### recipes-python
+
+This recipe installs the CYM Application using the tag provided in the `local.conf` file.
