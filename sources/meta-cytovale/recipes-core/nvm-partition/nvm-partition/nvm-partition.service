@@ -1,9 +1,11 @@
 [Unit]
 Description=NVM Partition mounting
-After=multi-user.target
+After=basic.target
 
 [Service]
 Type=oneshot
 ExecStart=/bin/bash -c "/home/root/nvm-partition.sh"
 RemainAfterExit=True
 
+[Install]
+WantedBy=multi-user.target

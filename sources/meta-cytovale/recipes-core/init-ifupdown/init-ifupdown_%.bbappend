@@ -11,4 +11,4 @@ do_install_append() {
 }
 
 CONFFILES_${PN} += "${sysconfdir}/network/interfaces \
-		    ${sysconfdir}/rc.local "
+		    		${sysconfdir}/rc.local "

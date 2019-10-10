@@ -20,6 +20,8 @@ else
 		echo "Successfully mounted new NVM Partition at ${MOUNTPOINT}"
 	else
 		echo "ERROR: Unable to mount NVM partition ${NODE} to ${MOUNTPOINT}"
+		exit
 	fi
 fi
 
+mkdir -p ${MOUNTPOINT}/log/journal
