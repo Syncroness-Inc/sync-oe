@@ -4,4 +4,4 @@ do_install_append() {
         ln -s /mnt/nvm/log/journal ${D}/var/log/journal
 }
 
-FILES_${PN} += "${D}/var/log/journal"
+FILES_${PN} += "/var/log/journal"
