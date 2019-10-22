@@ -58,7 +58,7 @@ task :cytovale_image => [:docker_image] do
   end
   `echo #{build_num} > #{CYTOVALE_PROJECT}/.build_num`
   `echo 'CYM_BSP_BUILD_NUMBER = "#{build_num}"' > #{CYTOVALE_PROJECT}/.extras.conf`
-  `echo 'CYM_BSP_VERSION = "#{CYM_BSP_VERSION}" >> #{CYTOVALE_PROJECT}/.extras.conf`
+  `echo 'CYM_BSP_VERSION = "#{CYM_BSP_VERSION}"' >> #{CYTOVALE_PROJECT}/.extras.conf`
   bitbake(CYTOVALE_PROJECT, "--postread=.extras.conf #{CYTOVALE_IMAGE}")
 end
 
