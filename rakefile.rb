@@ -1,6 +1,8 @@
+CYM_BSP_VERSION = "0.2.2-dev"
 PROJECT_ROOT = File.dirname(__FILE__)
 RUN_SCRIPT = File.join(PROJECT_ROOT, "scripts", "sync-oe-run")
 RELEASE_FOLDER=File.join(PROJECT_ROOT, "release")
+LOCAL_CONF=File.join(PROJECT_ROOT, "cytovale-build", "conf", "local.conf")
 
 DOCKER_EXECUTE_SCRIPT = File.join(PROJECT_ROOT, "docker", "sync-oe-execute")
 # Defines for the cytovale image
@@ -56,6 +58,7 @@ task :cytovale_image => [:docker_image] do
   end
   `echo #{build_num} > #{CYTOVALE_PROJECT}/.build_num`
   `echo 'CYM_BSP_BUILD_NUMBER = "#{build_num}"' > #{CYTOVALE_PROJECT}/.extras.conf`
+  `echo 'CYM_BSP_VERSION = "#{CYM_BSP_VERSION}"' >> #{CYTOVALE_PROJECT}/.extras.conf`
   bitbake(CYTOVALE_PROJECT, "--postread=.extras.conf #{CYTOVALE_IMAGE}")
 end
 
@@ -63,7 +66,7 @@ desc "Build a release package for the Cytovale project"
 task :cytovale_release => [:cytovale_image] do
   build_time = Time.now.strftime("%Y-%m-%d-%H-%M-%S")
   build_date_str = Time.now.getutc.strftime("%Y%m%d")
-  release_directory = File.join(RELEASE_FOLDER, CYTOVALE_PROJECT, CYTOVALE_IMAGE, build_time)
+  release_directory = File.join(RELEASE_FOLDER, CYTOVALE_PROJECT, CYTOVALE_IMAGE, CYM_BSP_VERSION, build_time)
   deploy_dir = File.join(PROJECT_ROOT, "deploy", "images", "apalis-imx6")
 
   build_info_directory = File.join(release_directory, "build_info")
@@ -93,12 +96,10 @@ task :cytovale_release => [:cytovale_image] do
   FileUtils.cp(rootfs_tarball, rootfs_directory)
   FileUtils.cp(rootfs_manifest, rootfs_directory)
 
-
-
   # Create the install package zip file by running the update.sh script
   release_tag = "Apalis-iMX6_LXDE-Image_2.8"
   working_dir = File.join(release_directory, ".tmp/deploy")
-  update_zip = File.join(release_directory, "cym-bsp-install-package.zip")
+  update_zip = File.join(release_directory, "cym-bsp-install-package-#{CYM_BSP_VERSION}.zip")
   release_tarball = File.join(deploy_dir, "#{release_tag}b4-#{build_date_str}.tar.bz2")
   update_binaries_dir = File.join(working_dir, "tftpboot")
   update_script_dir = File.join(working_dir, release_tag+".4")
