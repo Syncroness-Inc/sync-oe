@@ -2,7 +2,6 @@ CYM_BSP_VERSION = "0.2.2-dev"
 PROJECT_ROOT = File.dirname(__FILE__)
 RUN_SCRIPT = File.join(PROJECT_ROOT, "scripts", "sync-oe-run")
 RELEASE_FOLDER=File.join(PROJECT_ROOT, "release")
-LOCAL_CONF=File.join(PROJECT_ROOT, "cytovale-build", "conf", "local.conf")
 
 DOCKER_EXECUTE_SCRIPT = File.join(PROJECT_ROOT, "docker", "sync-oe-execute")
 # Defines for the cytovale image
