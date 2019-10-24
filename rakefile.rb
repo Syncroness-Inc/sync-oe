@@ -1,4 +1,4 @@
-CYM_BSP_VERSION = "0.2.2-dev"
+CYM_BSP_VERSION = "0.2.3-dev"
 PROJECT_ROOT = File.dirname(__FILE__)
 RUN_SCRIPT = File.join(PROJECT_ROOT, "scripts", "sync-oe-run")
 RELEASE_FOLDER=File.join(PROJECT_ROOT, "release")
